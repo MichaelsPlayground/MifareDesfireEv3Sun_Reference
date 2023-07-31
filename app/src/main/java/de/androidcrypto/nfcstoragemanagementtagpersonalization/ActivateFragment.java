@@ -1,7 +1,7 @@
-package de.androidcrypto.nfcstoragemanagement;
+package de.androidcrypto.nfcstoragemanagementtagpersonalization;
 
 import static android.content.Context.MODE_PRIVATE;
-import static de.androidcrypto.nfcstoragemanagement.Utils.doVibrate;
+import static de.androidcrypto.nfcstoragemanagementtagpersonalization.Utils.doVibrate;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

@@ -1,4 +1,4 @@
-package de.androidcrypto.nfcstoragemanagement;
+package de.androidcrypto.nfcstoragemanagementtagpersonalization;
 
 import static android.content.Context.VIBRATOR_SERVICE;
 

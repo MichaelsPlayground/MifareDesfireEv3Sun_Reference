@@ -1,4 +1,9 @@
-# NFC Storage Management
+# NFC Storage Management Tag Personalization
+
+## Note on this description
+
+This is the description of the project but not of this app - I will edit this at a later point !
+
 
 This is a Storage Management Application that helps in managing all cartons and goods stored in a Deposit room. 
 The app is using NFC tags of type NXP NTAG 21x to easily identify each position by simply reading the tag with 

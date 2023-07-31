@@ -1,4 +1,4 @@
-package de.androidcrypto.nfcstoragemanagement;
+package de.androidcrypto.nfcstoragemanagementtagpersonalization;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;

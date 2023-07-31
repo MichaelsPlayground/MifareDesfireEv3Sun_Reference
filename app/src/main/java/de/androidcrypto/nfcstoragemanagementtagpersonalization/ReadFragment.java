@@ -1,9 +1,8 @@
-package de.androidcrypto.nfcstoragemanagement;
+package de.androidcrypto.nfcstoragemanagementtagpersonalization;
 
-import static de.androidcrypto.nfcstoragemanagement.Utils.doVibrate;
-import static de.androidcrypto.nfcstoragemanagement.Utils.playSinglePing;
+import static de.androidcrypto.nfcstoragemanagementtagpersonalization.Utils.doVibrate;
+import static de.androidcrypto.nfcstoragemanagementtagpersonalization.Utils.playSinglePing;
 
-import android.content.Context;
 import android.content.Intent;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;

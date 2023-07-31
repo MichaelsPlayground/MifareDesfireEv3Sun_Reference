@@ -1,6 +1,6 @@
-package de.androidcrypto.nfcstoragemanagement;
+package de.androidcrypto.nfcstoragemanagementtagpersonalization;
 
-import static de.androidcrypto.nfcstoragemanagement.Utils.testBit;
+import static de.androidcrypto.nfcstoragemanagementtagpersonalization.Utils.testBit;
 
 import android.app.Activity;
 import android.nfc.FormatException;

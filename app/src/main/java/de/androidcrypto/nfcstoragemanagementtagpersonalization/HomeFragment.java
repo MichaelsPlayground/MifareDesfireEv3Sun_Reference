@@ -1,4 +1,4 @@
-package de.androidcrypto.nfcstoragemanagement;
+package de.androidcrypto.nfcstoragemanagementtagpersonalization;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

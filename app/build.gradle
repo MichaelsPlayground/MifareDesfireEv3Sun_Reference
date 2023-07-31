@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'de.androidcrypto.nfcstoragemanagement'
+    namespace 'de.androidcrypto.nfcstoragemanagementtagpersonalization'
     compileSdk 33
 
     defaultConfig {
-        applicationId "de.androidcrypto.nfcstoragemanagement"
+        applicationId "de.androidcrypto.nfcstoragemanagementtagpersonalization"
         minSdk 26
         targetSdk 33
         versionCode 1
