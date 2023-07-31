@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NFC Storage Management</string>
+    <string name="app_name">NFC Storage Management Tag Personalization</string>
     <string name="app_version">0.0.1</string>
     <string name="home_description">This application reads and writes NDEF messages from/to a NFC tag.\n\nAdditionally the app shows how to work with encrypted data that needs decryption.</string>
     <string name="home_fragments">There are 5 icons to click on:\n1 home = this page\n2 read NDEF message\n3 personalize = run all neccessary steps to activate UID mirroring withou user interaction\n4 activate the mirroring of data\n5 write the NDEF template to the tag\n\nNote: This app is working with tag types NTAG213, NTAG215 or NTAG216 only !</string>
