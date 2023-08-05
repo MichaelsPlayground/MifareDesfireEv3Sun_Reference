@@ -1,12 +1,14 @@
 package de.androidcrypto.nfcstoragemanagementtagpersonalization;
 
 import android.nfc.tech.NfcA;
+import android.util.Log;
 
 import java.io.IOException;
 import java.util.Arrays;
 
 public class NfcIdentifyNtag {
 
+    private static final String TAG = NfcIdentifyNtag.class.getName();
     private static String identifiedNtagType = ""; // NTAG213, NTAG215 or NTAG216
     private static int identifiedNtagPages = 0; // NTAG 213 = 36, 215 = 126, 216 = 222 pages
     private static int identifiedNtagMemoryBytes = 0; // NTAG 213 = 144, 215 = 504, 216 = 888 bytes
@@ -47,6 +49,7 @@ public class NfcIdentifyNtag {
 
     // returns 213/215/216 if tag is found or 0 when not detected
     public static String checkNtagType(NfcA nfca, byte[] ntagId) {
+        Log.d(TAG, "checkNtagType");
         clearInternalData();
         String returnCode = "0";
         identifiedNtagId = ntagId;
@@ -62,13 +65,19 @@ public class NfcIdentifyNtag {
             // only check for byte 00 - 04h means NXP...
             byte[] uid0 = Arrays.copyOfRange(response, 0, 1);
             //nfcaContentString = nfcaContentString + "\n" + " Uid pos 00: " + bytesToHex(uid0);
+
+            // todo There is hard coded check for NXP produced tags but there are more companies
+            /*
             if (!Arrays.equals(uid0, new byte[]{(byte) 0x04})) {
                 return returnCode; // not produced by NXP
             }
+             */
+            Log.d(TAG, Utils.printData("tag.UID", response));
             // get version
             response = nfca.transceive(new byte[] {
                     (byte) 0x60 // GET VERSION
             });
+            Log.d(TAG, Utils.printData("getVersion", response));
             if (Arrays.equals(response, ntag213VersionData)) {
                 returnCode = "213";
                 identifiedNtagType = "NTAG213";
