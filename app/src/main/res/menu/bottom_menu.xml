@@ -7,23 +7,23 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/read"
+        android:id="@+id/read_ndef_content"
         android:icon="@drawable/nfc_icon_r2"
         android:title="Read" />
 
     <item
-        android:id="@+id/personalize_tag"
+        android:id="@+id/prepare_sdm"
         android:icon="@drawable/outline_done_all_24"
-        android:title="prepare" />
+        android:title="prepare SDM" />
 
     <item
-        android:id="@+id/activate"
+        android:id="@+id/activate_sdm"
         android:icon="@drawable/outline_attractions_24"
-        android:title="activate" />
+        android:title="activate SDM" />
 
     <item
-        android:id="@+id/ndef_settings"
+        android:id="@+id/format_picc"
         android:icon="@drawable/outline_delete_forever_24"
-        android:title="format" />
+        android:title="format PICC" />
 
 </menu>

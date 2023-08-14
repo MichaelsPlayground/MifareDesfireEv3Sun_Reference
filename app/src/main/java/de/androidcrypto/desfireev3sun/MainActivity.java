@@ -10,6 +10,10 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final byte[] APPLICATION_KEY_MASTER_AES_DEFAULT = Utils.hexStringToByteArray("00000000000000000000000000000000"); // default AES key with 16 nulls
+    public static byte[] APPLICATION_KEY_MASTER_AES = Utils.hexStringToByteArray("A08899AABBCCDD223344556677889911");
+    public static final byte APPLICATION_KEY_MASTER_NUMBER = (byte) 0x00;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,31 +38,15 @@ public class MainActivity extends AppCompatActivity {
         int itemId = item.getItemId();
         if (itemId == R.id.home) {
             selectedFragment = new HomeFragment();
-        } else if (itemId == R.id.read) {
-            selectedFragment = new ReadFragment();
-        } else if (itemId == R.id.personalize_tag) {
-            selectedFragment = new PersonalizeTagFragment();
-        } else if (itemId == R.id.activate) {
-            selectedFragment = new ActivateFragment();
-        } else if (itemId == R.id.ndef_settings) {
-            selectedFragment = new NdefSettingsFragment();
-        /*
-        } else if (itemId == R.id.ndef_settings) {
-            selectedFragment = new NdefSettingsFragment();*/
+        } else if (itemId == R.id.read_ndef_content) {
+            selectedFragment = new ReadNdefContentFragment();
+        } else if (itemId == R.id.prepare_sdm) {
+            selectedFragment = new PrepareSdmFragment();
+        } else if (itemId == R.id.activate_sdm) {
+            selectedFragment = new ActivateSdmFragment();
+        } else if (itemId == R.id.format_picc) {
+            selectedFragment = new FormatPiccFragment();
       }
-
-        /*
-        if (itemId == R.id.home) {
-            selectedFragment = new HomeFragment();
-        } else if (itemId == R.id.send) {
-            selectedFragment = new SendFragment();
-        } else if (itemId == R.id.receive) {
-            selectedFragment = new ReceiveFragment();
-        } else if (itemId == R.id.receive_extended) {
-            selectedFragment = new ReceiveExtendedFragment();
-        }
-
-         */
         // It will help to replace the
         // one fragment to other.
         if (selectedFragment != null) {
