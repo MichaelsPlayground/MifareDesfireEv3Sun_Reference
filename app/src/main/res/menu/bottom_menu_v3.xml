@@ -14,7 +14,7 @@
     <item
         android:id="@+id/personalize_tag"
         android:icon="@drawable/outline_done_all_24"
-        android:title="prepare" />
+        android:title="personalize" />
 
     <item
         android:id="@+id/activate"
@@ -23,7 +23,7 @@
 
     <item
         android:id="@+id/ndef_settings"
-        android:icon="@drawable/outline_delete_forever_24"
-        android:title="format" />
+        android:icon="@drawable/outline_settings_24"
+        android:title="NDEF settings" />
 
 </menu>

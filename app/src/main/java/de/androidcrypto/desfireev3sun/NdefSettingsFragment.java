@@ -1,7 +1,6 @@
-package de.androidcrypto.nfcstoragemanagementtagpersonalization;
+package de.androidcrypto.desfireev3sun;
 
 import static android.content.Context.MODE_PRIVATE;
-import static de.androidcrypto.nfcstoragemanagementtagpersonalization.Utils.doVibrate;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -256,7 +255,7 @@ public class NdefSettingsFragment extends Fragment implements NfcAdapter.ReaderC
                     showMessage("IOException on close: " + e.getMessage());
                 }
             }
-            doVibrate(getActivity());
+            //doVibrate(getActivity());
             //playSinglePing(getContext());
         } else {
             showMessage("mNdef is null, not an NDEF formatted tag, trying to format the tag");

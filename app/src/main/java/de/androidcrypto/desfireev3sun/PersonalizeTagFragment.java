@@ -1,7 +1,6 @@
-package de.androidcrypto.nfcstoragemanagementtagpersonalization;
+package de.androidcrypto.desfireev3sun;
 
-import static de.androidcrypto.nfcstoragemanagementtagpersonalization.Utils.doVibrate;
-import static de.androidcrypto.nfcstoragemanagementtagpersonalization.Utils.printData;
+import static de.androidcrypto.desfireev3sun.Utils.printData;
 
 import android.content.Intent;
 import android.nfc.NfcAdapter;
@@ -236,7 +235,7 @@ public class PersonalizeTagFragment extends Fragment implements NfcAdapter.Reade
 
         boolean success = runCompletePersonalize();
         if (success) {
-            doVibrate(getActivity());
+            //doVibrate(getActivity());
         }
     }
 

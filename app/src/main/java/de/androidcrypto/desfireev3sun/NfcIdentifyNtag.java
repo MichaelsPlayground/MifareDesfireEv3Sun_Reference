@@ -1,4 +1,4 @@
-package de.androidcrypto.nfcstoragemanagementtagpersonalization;
+package de.androidcrypto.desfireev3sun;
 
 import android.nfc.tech.NfcA;
 import android.util.Log;

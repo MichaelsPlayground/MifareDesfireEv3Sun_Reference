@@ -1,6 +1,6 @@
-package de.androidcrypto.nfcstoragemanagementtagpersonalization;
+package de.androidcrypto.desfireev3sun;
 
-import static de.androidcrypto.nfcstoragemanagementtagpersonalization.Utils.testBit;
+import static de.androidcrypto.desfireev3sun.Utils.testBit;
 
 import android.app.Activity;
 import android.nfc.FormatException;

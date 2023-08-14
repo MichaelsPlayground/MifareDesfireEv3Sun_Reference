@@ -1,4 +1,12 @@
-# NFC Storage Management Tag Personalization
+# Mifare DESFire EV3 SUN Feature
+
+
+
+
+
+
+
+# THIS IS THE DESCRIPTION OF ANOTHER APP !!
 
 ## Note on this description
 
@@ -67,8 +75,10 @@ Nfc Simple PNG Transparent Background: https://www.freeiconspng.com/img/20581
 
 <a href="https://www.freeiconspng.com/img/20581">Nfc Png Simple</a>
 
-Icon / Vector editor: https://editor.method.ac/
+Author: Ahkâm, Image License: Personal Use Only
+
+[Icon / Vector editor: https://editor.method.ac/
 
 Minimum SDK is 26 (Android 8)
 
-android:inputType="text|textNoSuggestions"
+android:inputType="text|textNoSuggestions"]()

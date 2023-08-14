@@ -1,8 +1,7 @@
-package de.androidcrypto.nfcstoragemanagementtagpersonalization;
+package de.androidcrypto.desfireev3sun;
 
 import static android.content.Context.MODE_PRIVATE;
-import static de.androidcrypto.nfcstoragemanagementtagpersonalization.Utils.doVibrate;
-import static de.androidcrypto.nfcstoragemanagementtagpersonalization.Utils.testBit;
+import static de.androidcrypto.desfireev3sun.Utils.testBit;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -285,7 +284,7 @@ public class ActivateFragmentBeforeDeletionOfMethods extends Fragment implements
             e.printStackTrace();
         }
     }
-        doVibrate(getActivity());
+        //doVibrate(getActivity());
     }
 
     private String getPreferencesMatchString(String preferenceName, String preferenceHeader, String preferenceFooter) {
