@@ -221,13 +221,28 @@ accessible due to storage place)
 
 Datasheet for NTAG21x: https://www.nxp.com/docs/en/data-sheet/NTAG213_215_216.pdf
 
-Icons: https://www.freeiconspng.com/images/nfc-icon
+# License information
+
+The project is in **Public domain** but some parts have different license terms:
+
+## app icon
+
+Author: Ahkâm, Image License: Personal Use Only
 
 Nfc Simple PNG Transparent Background: https://www.freeiconspng.com/img/20581
 
 <a href="https://www.freeiconspng.com/img/20581">Nfc Png Simple</a>
 
-Author: Ahkâm, Image License: Personal Use Only
+Webservice: https://www.freeiconspng.com/images/nfc-icon
+
+## AES.java and TripleDES.java classes
+
+Author: Daniel Andrade
+
+Both classes were taken from the **nfcjlib** project taken available here: https://github.com/andrade/nfcjlib
+
+These classes are under a modified license, here are the license terms: https://github.com/andrade/nfcjlib/blob/master/LICENSE
+
 
 [Icon / Vector editor: https://editor.method.ac/
 
