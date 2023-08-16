@@ -1405,7 +1405,7 @@ fileSize: 128
             return true;
         } else {
             log(methodName, methodName + " FAILURE");
-            errorCode = RESPONSE_OK.clone();
+            errorCode = RESPONSE_FAILURE.clone();
             errorCodeReason = methodName + " FAILURE";
             return false;
         }
@@ -1446,6 +1446,9 @@ fileSize: 128
             errorCodeReason = "missing authentication, did you forget to authenticate with the application Master key (0x00) ?), aborted";
             return false;
         }
+
+        errorCode = RESPONSE_FAILURE.clone();
+        errorCodeReason = "FAILURE";
 
 /*
 fileNumber: 01
@@ -1610,7 +1613,7 @@ fileSize: 128
             return true;
         } else {
             log(methodName, methodName + " FAILURE");
-            errorCode = RESPONSE_OK.clone();
+            errorCode = RESPONSE_FAILURE.clone();
             errorCodeReason = methodName + " FAILURE";
             return false;
         }

@@ -194,9 +194,11 @@ public class ReadNdefContentFragment extends Fragment implements NfcAdapter.Read
         responseData = desfireEv3.getErrorCode();
 
         if (content != null) {
-
+            writeToUiAppend("");
             writeToUiAppend(printData("content", content));
+            writeToUiAppend("");
             writeToUiAppend(new String(content, StandardCharsets.UTF_8));
+            writeToUiAppend("");
 
             // content begins: 0051d1014d550473646d2e6e
             //                       ||       01 = ndef record tnf
@@ -214,6 +216,7 @@ public class ReadNdefContentFragment extends Fragment implements NfcAdapter.Read
             content = Arrays.copyOf(content, Byte.toUnsignedInt(ndefLength));
             String url = Utils.URI_PREFIX_MAP[ndefUrlTape] + new String(Arrays.copyOfRange(content, 7, content.length));
             writeToUiAppend(url);
+            writeToUiAppend("");
             writeToUiAppendBorderColor("read the content from fileId 0x02 SUCCESS", COLOR_GREEN);
             vibrateShort();
         } else {

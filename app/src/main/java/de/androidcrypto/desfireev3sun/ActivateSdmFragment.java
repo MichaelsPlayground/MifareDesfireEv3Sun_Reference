@@ -195,6 +195,33 @@ public class ActivateSdmFragment extends Fragment implements NfcAdapter.ReaderCa
             }
         });
 
+        /**
+         * As some strange behaviour can happen when UID and ReadCounter mirror are enabled one only
+         * I en- and disabling both of them - "all or nothing"
+         */
+
+        cbUidMirror.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (cbUidMirror.isChecked()) {
+                    cbReadCounterMirror.setChecked(true);
+                } else {
+                    cbReadCounterMirror.setChecked(false);
+                }
+            }
+        });
+
+        cbReadCounterMirror.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (cbReadCounterMirror.isChecked()) {
+                    cbUidMirror.setChecked(true);
+                } else {
+                    cbUidMirror.setChecked(false);
+                }
+            }
+        });
+
         // checking on setReadCounterLimit
         cbReadCounterLimit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -314,9 +341,6 @@ SDM_ENCOffset      4F0000
 SDM_ENCLength      200000
 SDM_MACOffset      750000
 SDM_ReadCtrLimit
-
-sample data with disabled SDM
-
  */
 
         // now we analyze the data
@@ -482,6 +506,7 @@ sample data with disabled SDM
         }
         // enabling the feature
         success = desfireEv3.changeFileSettingsNtag424Dna(DesfireEv3Light.NDEF_FILE_02_NUMBER, commandData);
+        responseData = desfireEv3.getErrorCode();
         if (success) {
             writeToUiAppendBorderColor("enabling the SDM feature on fileId 0x02 SUCCESS", COLOR_GREEN);
             //vibrateShort();
@@ -504,7 +529,6 @@ sample data with disabled SDM
             return;
         }
     }
-
 
     /**
      * Disabling the SDM/SUN feature
@@ -623,6 +647,8 @@ sample data with disabled SDM
                     return;
                 }
                 desfireEv3 = new DesfireEv3Light(isoDep);
+
+                // hardcoded check for Mifare DESFire EV3 tags as EV1 and EV2 do not support this feature
                 isDesfireEv3 = desfireEv3.checkForDESFireEv3();
                 if (!isDesfireEv3) {
                     writeToUiAppendBorderColor("The tag is not a DESFire EV3 tag, stopping any further activities", COLOR_RED);

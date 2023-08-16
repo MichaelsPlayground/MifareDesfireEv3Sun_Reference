@@ -469,8 +469,19 @@ public class NdefForSdm {
         }
 
         // building the template url based on enabled options
-        // see NTAG 424 DNA NT4H2421Gx.pdf page 43 for visual data
+        // see NTAG 424 DNA NT4H2421Gx.pdf page 43 a visual workflow
+
+        // this is a hardcoded workaround because the backend server has a different address when working
+        // with plaintext data:
+        // base url (encrypted): https://sdm.nfcdeveloper.com/tag
+        // base url (plaintext): https://sdm.nfcdeveloper.com/tagpt
+        // so in case of plaintext mirroring I'm adding a 'pt' to the baseUrl
+        if (!isPresentEncPICCDataOffset) {
+            sb.append("pt");
+        }
+
         if (enableSdm) sb.append(urlParameterHeader);
+
         if (isPresentUidOffset) {
             sb.append(urlPlainUidName).append(urlParameterFooter).append(urlPlainUidPlaceholder);
         }
