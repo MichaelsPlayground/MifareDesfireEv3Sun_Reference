@@ -1,5 +1,7 @@
 # Mifare DESFire EV3 SUN Feature
 
+# REFERENCE - This is a repository just for documenting the existence of code on August 28th, 2023. DO NOT CHANGE THE CONTENT !
+
 # Activation of Secure Dynamic Messaging (SDM) for Secure Unique NFC (SUN) feature
 
 The SDM/SUN feature is available on Mifare DESFire EV3 card types only. It is very useful if your business case is to work
